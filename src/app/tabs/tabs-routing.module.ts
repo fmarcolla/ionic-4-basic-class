@@ -28,6 +28,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'configuracoes',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../configuracoes/configuracoes.module').then(m => m.ConfiguracoesPageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/home',
         pathMatch: 'full'

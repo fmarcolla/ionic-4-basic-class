@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalhes do Filme - </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="filme">
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imagens/avatar.png">
+      </ion-avatar>
+      <h2 class="fedd_title">{{ filme.original_title }}</h2>
+      <p class="feed_date"><ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="filme.release_date"></ion-datetime></p>
+    </ion-item>
+
+    <img [src]="imagem_path + filme.backdrop_path">
+
+    <ion-card-content>
+      <p>{{ filme.overview }}</p>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>

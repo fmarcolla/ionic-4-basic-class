@@ -12,6 +12,11 @@ import { FeedPageModule } from '../app/feed/feed.module';
 import { IntroPageModule } from '../app/intro/intro.module';
 import { TabsPageModule } from '../app/tabs/tabs.module';
 import { HomePageModule } from '../app/home/home.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ConfiguracoesPageModule } from '../app/configuracoes/configuracoes.module';
+import { SobrePageModule } from '../app/sobre/sobre.module';
+import { PerfilPageModule } from '../app/perfil/perfil.module';
+import { FilmeDetalhesPageModule } from './filme-detalhes/filme-detalhes.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,7 +28,12 @@ import { HomePageModule } from '../app/home/home.module';
     FeedPageModule, 
     IntroPageModule,
     TabsPageModule,
-    HomePageModule
+    HomePageModule,
+    HttpClientModule,
+    ConfiguracoesPageModule,
+    SobrePageModule,
+    PerfilPageModule,
+    FilmeDetalhesPageModule
   ],
   providers: [
     StatusBar,
